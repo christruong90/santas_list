@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_add_child"
+        android:title="@string/add_child_title"
+        android:icon="@drawable/baseline_star_white_48"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_search_child"
+        android:title="@string/search_child"
+        android:icon="@drawable/baseline_search_24"
+        android:orderInCategory="2"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_edit_child"
+        android:title="@string/edit_child_title"
+        android:orderInCategory="3"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_delete_child"
+        android:title="@string/delete_child_title"
+        android:orderInCategory="4"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_delete_table"
+        android:title="@string/delete_table_title"
+        android:orderInCategory="5"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_display_table"
+        android:title="@string/display_table_title"
+        android:orderInCategory="6"
+        app:showAsAction="never" />
+
+
+</menu>
