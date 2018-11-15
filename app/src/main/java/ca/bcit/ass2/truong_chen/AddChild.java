@@ -246,6 +246,12 @@ public class AddChild extends AppCompatActivity implements ChildDialog.ChildDial
         }
         StringBuffer buffer = new StringBuffer();
         while (resultData.moveToNext()) {
+            String resultNaughty = "";
+            if (resultData.getString(11).equals("0")) {
+                resultNaughty = "Not Naughty!";
+            } else if (resultData.getString(11).equals("1")) {
+                resultNaughty = "Naughty!";
+            }
             buffer.append("Id: " + resultData.getString(0) + "\n");
             buffer.append("Name: " + resultData.getString(1) + "\n");
             buffer.append("Last Name: " + resultData.getString(2) + "\n");
@@ -257,7 +263,7 @@ public class AddChild extends AppCompatActivity implements ChildDialog.ChildDial
             buffer.append("Country: " + resultData.getString(8) + "\n");
             buffer.append("Latitude: " + resultData.getString(9) + "\n");
             buffer.append("Longitude: " + resultData.getString(10) + "\n");
-            buffer.append("Is Naughty?: " + resultData.getString(11) + "\n");
+            buffer.append("Is Naughty?: " + resultNaughty + "\n");
             buffer.append("Date Created: " + resultData.getString(12) + "\n\n");
         }
         onPause();
