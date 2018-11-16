@@ -197,19 +197,19 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="Naughty? (y/n)"
+    android:text="Naughty?"
     android:id="@+id/isNaughty"
     android:layout_below="@+id/longitude"
     android:layout_alignParentLeft="true"
     android:layout_alignParentStart="true" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText_isNaughty"
-        android:layout_alignTop="@+id/isNaughty"
-        android:layout_toRightOf="@+id/isNaughty"
-        android:layout_toEndOf="@+id/isNaughty" />
+    <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/editText_isNaughty"-->
+        <!--android:layout_alignTop="@+id/isNaughty"-->
+        <!--android:layout_toRightOf="@+id/isNaughty"-->
+        <!--android:layout_toEndOf="@+id/isNaughty" />-->
 
     <TextView
     android:layout_width="wrap_content"
@@ -248,5 +248,28 @@
         android:id="@+id/button_InsertInput"
         android:layout_centerVertical="true"
         android:layout_below="@+id/dateCreated"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:id="@+id/naughty_group"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/isNaughty"
+        android:layout_toRightOf="@+id/isNaughty"
+        android:layout_toEndOf="@+id/isNaughty"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/naughty_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes" />
+
+        <RadioButton
+            android:id="@+id/naughty_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No" />
+    </RadioGroup>
+
+
 
 </RelativeLayout>

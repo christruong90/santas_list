@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class EditChild extends AppCompatActivity {
@@ -24,6 +26,9 @@ public class EditChild extends AppCompatActivity {
     private EditText resultLongitude;
     private EditText resultIsNaughty;
     private EditText resultDateCreated;
+    private RadioGroup radioGroup;
+    private RadioButton radioBtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +41,8 @@ public class EditChild extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
 
+        radioGroup = findViewById(R.id.naughty_group);
+
         resultFirstName = findViewById(R.id.editText_firstName);
         resultId = findViewById(R.id.editText_id);
         resultLastName = findViewById(R.id.editText_lastName);
@@ -47,7 +54,7 @@ public class EditChild extends AppCompatActivity {
         resultCountry = findViewById(R.id.editText_country);
         resultLatitude = findViewById(R.id.editText_latitude);
         resultLongitude = findViewById(R.id.editText_longitude);
-        resultIsNaughty = findViewById(R.id.editText_isNaughty);
+//        resultIsNaughty = findViewById(R.id.editText_isNaughty);
         resultDateCreated = findViewById(R.id.editText_dateCreated);
 
 
@@ -56,12 +63,13 @@ public class EditChild extends AppCompatActivity {
         submitInput.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(resultFirstName.getText().toString().trim().equals("") || resultId.getText().toString().trim().equals("")) {
+                if(resultFirstName.getText().toString().trim().equals("") || resultId.getText().toString().trim().equals("") || radioGroup.getCheckedRadioButtonId() == -1) {
                     Toast.makeText(EditChild.this, "You must enter all fields", Toast.LENGTH_SHORT).show();
                 }
-                if((!resultIsNaughty.getText().toString().trim().toLowerCase().equals("y")) && (!resultIsNaughty.getText().toString().trim().toLowerCase().equals("n")) ) {
-                    Toast.makeText(EditChild.this," \"Is Naughty\" field must be either \"y\" or \"n\" ", Toast.LENGTH_SHORT).show();
-                } else {
+//                if((!resultIsNaughty.getText().toString().trim().toLowerCase().equals("y")) && (!resultIsNaughty.getText().toString().trim().toLowerCase().equals("n")) ) {
+//                    Toast.makeText(EditChild.this," \"Is Naughty\" field must be either \"y\" or \"n\" ", Toast.LENGTH_SHORT).show();
+//                }
+                else {
                     Intent returnIntent = new Intent();
                     returnIntent.putExtra("id", resultId.getText().toString().trim());
                     returnIntent.putExtra("firstName", resultFirstName.getText().toString().trim());
@@ -86,13 +94,28 @@ public class EditChild extends AppCompatActivity {
                         returnIntent.putExtra("longitude", resultLongitude.getText().toString());
                     }
 
-                    if (resultIsNaughty.getText().toString().toLowerCase().equals("y")) {
-                        returnIntent.putExtra("isNaughty", 1);
-                    } else if  (resultIsNaughty.getText().toString().toLowerCase().equals("n")) {
-                        returnIntent.putExtra("isNaughty", 0);
-                    } else {
-                        Toast.makeText(EditChild.this,"ERRORS ", Toast.LENGTH_SHORT).show();
+                    int radioId = radioGroup.getCheckedRadioButtonId();
+                    radioBtn = (RadioButton) findViewById(radioId);
+
+
+
+                    String radioText = radioBtn.getText().toString();
+
+                    if (radioText == null) {
                     }
+                    if (radioText.equals("Yes")) {
+                        returnIntent.putExtra("isNaughty", 1);
+                    } else if (radioText.equals("No")) {
+                        returnIntent.putExtra("isNaughty", 0);
+                    }
+
+//                    if (resultIsNaughty.getText().toString().toLowerCase().equals("y")) {
+//                        returnIntent.putExtra("isNaughty", 1);
+//                    } else if  (resultIsNaughty.getText().toString().toLowerCase().equals("n")) {
+//                        returnIntent.putExtra("isNaughty", 0);
+//                    } else {
+//                        Toast.makeText(EditChild.this,"ERRORS ", Toast.LENGTH_SHORT).show();
+//                    }
                     returnIntent.putExtra("dateCreated", resultDateCreated.getText().toString());
 
 
