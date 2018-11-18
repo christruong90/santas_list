@@ -8,66 +8,71 @@
     tools:context=".AddChild"
     android:background="@drawable/repeat_bg"
     >
-    <include layout="@layout/toolbar_main" android:id="@+id/toolbar" />
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+    <include layout="@layout/toolbar_main" android:id="@+id/toolbar" />
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
             android:gravity="center">
-            <ImageButton
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:text="Santa's List"
-                android:id="@+id/button_showData"
-                android:src="@drawable/hat"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="15dp"
-                android:scaleType="fitXY"
-               />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:text="Santa's List"
+                    android:id="@+id/button_showData"
+                    android:src="@drawable/hat"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:scaleType="fitXY"
+                   />
 
-            <ImageButton
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:scaleType="fitXY"
-                android:text="Edit Info"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="15dp"
-                android:src="@drawable/gift"
-                android:id="@+id/button_edit"
-                />
-        </LinearLayout>
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="fitXY"
+                    android:text="Edit Info"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/gift"
+                    android:id="@+id/button_edit"
+                    />
+            </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-            <ImageButton
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="15dp"
-                android:scaleType="fitXY"
-                android:text="Delete an Entry"
-                android:id="@+id/button_Delete"
-                android:src="@drawable/dear"
-                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:scaleType="fitXY"
+                    android:text="Delete an Entry"
+                    android:id="@+id/button_Delete"
+                    android:src="@drawable/dear"
+                    />
 
-            <ImageButton
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="15dp"
-                android:scaleType="fitXY"
-                android:text="Search"
-                android:src="@drawable/search"
-                android:id="@+id/button_Search"
-                />
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:scaleType="fitXY"
+                    android:text="Search"
+                    android:src="@drawable/search"
+                    android:id="@+id/button_Search"
+                    />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
