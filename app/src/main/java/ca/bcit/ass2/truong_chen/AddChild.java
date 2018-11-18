@@ -165,8 +165,7 @@ public class AddChild extends AppCompatActivity implements ChildDialog.ChildDial
                     String returnDateCreated = data.getStringExtra("dateCreated");
 
                     boolean isUpdated = myDb.editData(returnFirstName, returnId, returnLastName, returnBirthDate, returnStreet, returnCity,
-                            returnProvince, returnPostalCode, returnCountry, returnLatitude, returnLongitude,returnIsNaughty,
-                            returnDateCreated);
+                            returnProvince, returnPostalCode, returnCountry, returnLatitude, returnLongitude,returnIsNaughty);
 
                     if (isUpdated == true) {
                         Toast.makeText(AddChild.this, "Entry has been Updated", Toast.LENGTH_SHORT).show();
@@ -190,7 +189,7 @@ public class AddChild extends AppCompatActivity implements ChildDialog.ChildDial
                     Double latitudeInput = data.getDoubleExtra("insertLatitude",0);
                     Double longitudeInput = data.getDoubleExtra("insertLongitude", 0);
                     int isNaughtyInput = data.getIntExtra("insertIsNaughty", 0);
-                    String dateCreatedInput = data.getStringExtra("insertDateCreated");
+//                    String dateCreatedInput = data.getStringExtra("insertDateCreated");
 
 
                     boolean isInserted = myDb.insertData(firstNameInput,
@@ -203,8 +202,8 @@ public class AddChild extends AppCompatActivity implements ChildDialog.ChildDial
                             countryInput,
                             latitudeInput,
                             longitudeInput,
-                            isNaughtyInput,
-                            dateCreatedInput
+                            isNaughtyInput
+//                            dateCreatedInput
                     );
                     if(isInserted == true) {
                         Toast.makeText(AddChild.this, "Data has been inserted", Toast.LENGTH_SHORT).show();

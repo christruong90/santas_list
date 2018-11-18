@@ -56,7 +56,7 @@ public class InsertRow extends AppCompatActivity {
         insertLatitude = findViewById(R.id.editText_latitude);
         insertLongitude = findViewById(R.id.editText_longitude);
 //        insertIsNaughty = findViewById(R.id.editText_isNaughty);
-        insertDateCreated = findViewById(R.id.editText_dateCreated);
+//        insertDateCreated = findViewById(R.id.editText_dateCreated);
 
 
 
@@ -131,7 +131,7 @@ public class InsertRow extends AppCompatActivity {
 //                    }
 
 
-                    returnIntent.putExtra("insertDateCreated", insertDateCreated.getText().toString());
+//                    returnIntent.putExtra("insertDateCreated", insertDateCreated.getText().toString());
 
                     setResult(RESULT_OK, returnIntent);
                     finish();

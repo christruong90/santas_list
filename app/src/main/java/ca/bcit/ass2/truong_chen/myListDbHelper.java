@@ -6,6 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class myListDbHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "xmasList.db";
     private static final String TABLE_NAME = "children_table";
@@ -56,7 +59,7 @@ public class myListDbHelper extends SQLiteOpenHelper {
     }
 
     public boolean insertData(String firstName, String lastName, String birthDate, String street, String city, String province, String postalCode,
-                              String country, double latitude, double longitude, int isNaughty, String dateCreated) {
+                              String country, double latitude, double longitude, int isNaughty) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2, firstName);
@@ -70,7 +73,11 @@ public class myListDbHelper extends SQLiteOpenHelper {
         contentValues.put(COL_10, latitude);
         contentValues.put(COL_11, longitude);
         contentValues.put(COL_12, isNaughty);
-        contentValues.put(COL_13, dateCreated);
+
+        SimpleDateFormat setDate = new SimpleDateFormat("yyyy-MM-dd");
+        String dateString = setDate.format(new Date());
+
+        contentValues.put(COL_13, dateString);
 
         long result = db.insert(TABLE_NAME, null, contentValues);
 
@@ -101,7 +108,7 @@ public class myListDbHelper extends SQLiteOpenHelper {
 
     public boolean editData(String nameFirst, String id, String lastName, String birthDate, String street, String city,
                             String province, String postalCode, String country, double latitude, double longitude,
-                            int isNaughty, String dateCreated) {
+                            int isNaughty) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -118,7 +125,7 @@ public class myListDbHelper extends SQLiteOpenHelper {
         contentValues.put(COL_10, latitude);
         contentValues.put(COL_11, longitude);
         contentValues.put(COL_12, isNaughty);
-        contentValues.put(COL_13, dateCreated);
+//        contentValues.put(COL_13, dateCreated);
 
         db.update(TABLE_NAME, contentValues, "Id = ?",new String[]{id});
         return true;
