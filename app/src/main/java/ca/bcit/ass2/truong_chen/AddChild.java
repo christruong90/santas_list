@@ -65,10 +65,14 @@ public class AddChild extends AppCompatActivity implements ChildDialog.ChildDial
         btnDel = (ImageButton) findViewById(R.id.button_Delete);
         btnSearch = (ImageButton)findViewById(R.id.button_Search);
         viewData();
+        searchData();
         editData();
+        deleteData();
 //        deleteEntry();
 
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -115,6 +119,28 @@ public class AddChild extends AppCompatActivity implements ChildDialog.ChildDial
         myDb.deleteAllData();
     }
 
+    public void searchData() {
+        btnSearch.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        openSearchDialog();
+                    }
+                }
+        );
+    }
+
+    public void deleteData() {
+        btnDel.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        openDelDialog();
+                    }
+                }
+        );
+    }
+
 
     public void openDelDialog() {
         ChildDialog deleteWindow = new ChildDialog();
@@ -132,6 +158,7 @@ public class AddChild extends AppCompatActivity implements ChildDialog.ChildDial
                 }
         );
     }
+
 
     public void editData() {
         btnEdit.setOnClickListener(
