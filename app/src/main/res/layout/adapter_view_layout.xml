@@ -9,12 +9,14 @@
         android:id="@+id/show_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:text="id" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/show_firstName"
+        android:textColor="@color/white"
         android:layout_below="@+id/show_id"
         android:text="first name"/>
 
@@ -22,6 +24,7 @@
         android:id="@+id/show_lastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:layout_below="@+id/show_firstName"
         android:text="last name" />
 

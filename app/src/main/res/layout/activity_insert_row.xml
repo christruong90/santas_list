@@ -1,275 +1,305 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".InsertRow">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/repeat_bg">
+    <RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".InsertRow">
 
-    <include layout="@layout/toolbar_main" android:id="@+id/toolbar" />
+        <include layout="@layout/toolbar_main" android:id="@+id/toolbar" />
 
 
-    <TextView
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="First Name"
+            android:id="@+id/firstName"
+            android:textColor="@color/white"
+            android:layout_below="@+id/toolbar"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_firstName"
+            android:textColor="@color/white"
+            android:layout_alignTop="@+id/firstName"
+            android:layout_toRightOf="@+id/firstName"
+            android:layout_toEndOf="@+id/firstName" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Last Name"
+            android:id="@+id/lastName"
+            android:layout_below="@+id/firstName"/>
+
+
+        <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_lastName"
+            android:textColor="@color/white"
+        android:layout_alignTop="@+id/lastName"
+        android:layout_toRightOf="@+id/lastName"
+        android:layout_toEndOf="@+id/lastName" />
+
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="First Name"
-        android:id="@+id/firstName"
-        android:layout_below="@+id/toolbar"/>
+        android:text="Birth Date"
+        android:id="@+id/birthDate"
+            android:textColor="@color/white"
+        android:layout_below="@+id/lastName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText_firstName"
-        android:layout_alignTop="@+id/firstName"
-        android:layout_toRightOf="@+id/firstName"
-        android:layout_toEndOf="@+id/firstName" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_birthDate"
+            android:layout_below="@+id/editText_lastName"
+            android:layout_alignTop="@id/birthDate"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/birthDate"
+            android:layout_toEndOf="@+id/birthDate" />
 
-    <TextView
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Last Name"
-        android:id="@+id/lastName"
-        android:layout_below="@+id/firstName"/>
+        android:text="Street Address"
+        android:id="@+id/street"
+            android:textColor="@color/white"
+        android:layout_below="@+id/birthDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_street"
+            android:layout_alignTop="@+id/street"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/street"
+            android:layout_toEndOf="@+id/street" />
 
 
-    <EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/editText_lastName"
-    android:layout_alignTop="@+id/lastName"
-    android:layout_toRightOf="@+id/lastName"
-    android:layout_toEndOf="@+id/lastName" />
 
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="Birth Date"
-    android:id="@+id/birthDate"
-    android:layout_below="@+id/lastName"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true" />
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="City"
+        android:id="@+id/city"
+            android:textColor="@color/white"
+        android:layout_below="@+id/street"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-    <EditText
+        <EditText
+            android:id="@+id/editText_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/city"
+            android:textColor="@color/white"
+            android:layout_toEndOf="@+id/city"
+            android:layout_toRightOf="@+id/city" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Province"
+        android:id="@+id/province"
+            android:textColor="@color/white"
+        android:layout_below="@+id/city"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_province"
+            android:textColor="@color/white"
+            android:layout_alignTop="@+id/province"
+            android:layout_toRightOf="@+id/province"
+            android:layout_toEndOf="@+id/province" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Postal Code"
+            android:textColor="@color/white"
+        android:id="@+id/postalCode"
+        android:layout_below="@+id/province"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_postalCode"
+            android:textColor="@color/white"
+            android:layout_alignTop="@+id/postalCode"
+            android:layout_toRightOf="@+id/postalCode"
+            android:layout_toEndOf="@+id/postalCode" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Country"
+        android:id="@+id/country"
+            android:textColor="@color/white"
+        android:layout_below="@+id/postalCode"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_country"
+            android:textColor="@color/white"
+            android:layout_alignTop="@+id/country"
+            android:layout_toRightOf="@+id/country"
+            android:layout_toEndOf="@+id/country" />
+
+
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Latitude"
+        android:id="@+id/latitude"
+            android:textColor="@color/white"
+        android:layout_below="@+id/country"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_latitude"
+            android:layout_alignTop="@+id/latitude"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/latitude"
+            android:layout_toEndOf="@+id/latitude" />
+
+
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Longitude"
+        android:id="@+id/longitude"
+            android:textColor="@color/white"
+        android:layout_below="@+id/latitude"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_longitude"
+            android:layout_alignTop="@+id/longitude"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/longitude"
+            android:layout_toEndOf="@+id/longitude" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Naughty?"
+        android:id="@+id/isNaughty"
+            android:textColor="@color/white"
+        android:layout_below="@+id/longitude"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/editText_isNaughty"-->
+            <!--android:layout_alignTop="@+id/isNaughty"-->
+            <!--android:layout_toRightOf="@+id/isNaughty"-->
+            <!--android:layout_toEndOf="@+id/isNaughty" />-->
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Date Created"
+        android:id="@+id/dateCreated"
+            android:textColor="@color/white"
+        android:layout_below="@+id/isNaughty"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+        <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_birthDate"
-        android:layout_below="@+id/editText_lastName"
-        android:layout_alignTop="@id/birthDate"
-        android:layout_toRightOf="@+id/birthDate"
-        android:layout_toEndOf="@+id/birthDate" />
+        android:id="@+id/editText_dateCreated"
+        android:layout_alignTop="@+id/dateCreated"
+            android:textColor="@color/white"
+        android:layout_toRightOf="@+id/dateCreated"
+        android:layout_toEndOf="@+id/dateCreated" />
 
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="Street Address"
-    android:id="@+id/street"
-    android:layout_below="@+id/birthDate"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText_street"
-        android:layout_alignTop="@+id/street"
-        android:layout_toRightOf="@+id/street"
-        android:layout_toEndOf="@+id/street" />
-
-
-
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="City"
-    android:id="@+id/city"
-    android:layout_below="@+id/street"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true" />
-
-    <EditText
-        android:id="@+id/editText_city"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/city"
-        android:layout_toEndOf="@+id/city"
-        android:layout_toRightOf="@+id/city" />
-
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="Province"
-    android:id="@+id/province"
-    android:layout_below="@+id/city"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText_province"
-        android:layout_alignTop="@+id/province"
-        android:layout_toRightOf="@+id/province"
-        android:layout_toEndOf="@+id/province" />
-
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="Postal Code"
-    android:id="@+id/postalCode"
-    android:layout_below="@+id/province"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText_postalCode"
-        android:layout_alignTop="@+id/postalCode"
-        android:layout_toRightOf="@+id/postalCode"
-        android:layout_toEndOf="@+id/postalCode" />
-
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="Country"
-    android:id="@+id/country"
-    android:layout_below="@+id/postalCode"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText_country"
-        android:layout_alignTop="@+id/country"
-        android:layout_toRightOf="@+id/country"
-        android:layout_toEndOf="@+id/country" />
-
-
-
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="Latitude"
-    android:id="@+id/latitude"
-    android:layout_below="@+id/country"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText_latitude"
-        android:layout_alignTop="@+id/latitude"
-        android:layout_toRightOf="@+id/latitude"
-        android:layout_toEndOf="@+id/latitude" />
-
-
-
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="Longitude"
-    android:id="@+id/longitude"
-    android:layout_below="@+id/latitude"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText_longitude"
-        android:layout_alignTop="@+id/longitude"
-        android:layout_toRightOf="@+id/longitude"
-        android:layout_toEndOf="@+id/longitude" />
-
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="Naughty?"
-    android:id="@+id/isNaughty"
-    android:layout_below="@+id/longitude"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true" />
-
-    <!--<EditText-->
-        <!--android:layout_width="match_parent"-->
+        <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/editText_isNaughty"-->
-        <!--android:layout_alignTop="@+id/isNaughty"-->
-        <!--android:layout_toRightOf="@+id/isNaughty"-->
-        <!--android:layout_toEndOf="@+id/isNaughty" />-->
+        <!--android:text="Add to Santa's list"-->
+        <!--android:id="@+id/button_addRow"-->
+        <!--android:layout_below="@+id/editText_firstName"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_marginTop="76dp" />-->
 
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="Date Created"
-    android:id="@+id/dateCreated"
-    android:layout_below="@+id/isNaughty"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true" />
-
-
-    <EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/editText_dateCreated"
-    android:layout_alignTop="@+id/dateCreated"
-    android:layout_toRightOf="@+id/dateCreated"
-    android:layout_toEndOf="@+id/dateCreated" />
-
-    <!--<Button-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="Add to Santa's list"-->
-    <!--android:id="@+id/button_addRow"-->
-    <!--android:layout_below="@+id/editText_firstName"-->
-    <!--android:layout_alignParentLeft="true"-->
-    <!--android:layout_alignParentStart="true"-->
-    <!--android:gravity="center"-->
-    <!--android:layout_marginTop="76dp" />-->
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        android:id="@+id/button_InsertInput"
-        android:layout_centerVertical="true"
-        android:layout_below="@+id/dateCreated"/>
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:id="@+id/naughty_group"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/isNaughty"
-        android:layout_toRightOf="@+id/isNaughty"
-        android:layout_toEndOf="@+id/isNaughty"
-        android:orientation="horizontal">
-        <RadioButton
-            android:id="@+id/naughty_yes"
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Yes" />
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:id="@+id/button_InsertInput"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/dateCreated"/>
 
-        <RadioButton
-            android:id="@+id/naughty_no"
+        <RadioGroup
             android:layout_width="wrap_content"
+            android:id="@+id/naughty_group"
             android:layout_height="wrap_content"
-            android:text="No" />
-    </RadioGroup>
+            android:layout_alignTop="@+id/isNaughty"
+            android:layout_toRightOf="@+id/isNaughty"
+            android:layout_toEndOf="@+id/isNaughty"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/naughty_yes"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/naughty_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="No" />
+        </RadioGroup>
 
 
 
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
