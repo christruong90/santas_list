@@ -271,24 +271,24 @@
         <!--android:layout_toRightOf="@+id/isNaughty"-->
         <!--android:layout_toEndOf="@+id/isNaughty" />-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Date Created"
-        android:id="@+id/dateCreated"
-        android:layout_below="@+id/isNaughty"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:text="Date Created"-->
+        <!--android:id="@+id/dateCreated"-->
+        <!--android:layout_below="@+id/isNaughty"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
 
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText_dateCreated"
-        android:layout_alignTop="@+id/dateCreated"
-        android:layout_toRightOf="@+id/dateCreated"
-        android:layout_toEndOf="@+id/dateCreated" />
+    <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/editText_dateCreated"-->
+        <!--android:layout_alignTop="@+id/dateCreated"-->
+        <!--android:layout_toRightOf="@+id/dateCreated"-->
+        <!--android:layout_toEndOf="@+id/dateCreated" />-->
 
 
 
@@ -300,7 +300,7 @@
         android:text="Submit"
         android:id="@+id/button_EditInput"
         android:layout_centerVertical="true"
-        android:layout_below="@+id/dateCreated"/>
+        android:layout_below="@+id/isNaughty"/>
 
 
 

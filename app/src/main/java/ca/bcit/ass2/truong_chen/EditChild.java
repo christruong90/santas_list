@@ -55,7 +55,7 @@ public class EditChild extends AppCompatActivity {
         resultLatitude = findViewById(R.id.editText_latitude);
         resultLongitude = findViewById(R.id.editText_longitude);
 //        resultIsNaughty = findViewById(R.id.editText_isNaughty);
-        resultDateCreated = findViewById(R.id.editText_dateCreated);
+//        resultDateCreated = findViewById(R.id.editText_dateCreated);
 
 
         Button submitInput = findViewById(R.id.button_EditInput);
@@ -116,7 +116,7 @@ public class EditChild extends AppCompatActivity {
 //                    } else {
 //                        Toast.makeText(EditChild.this,"ERRORS ", Toast.LENGTH_SHORT).show();
 //                    }
-                    returnIntent.putExtra("dateCreated", resultDateCreated.getText().toString());
+//                    returnIntent.putExtra("dateCreated", resultDateCreated.getText().toString());
 
 
                     setResult(RESULT_OK, returnIntent);
