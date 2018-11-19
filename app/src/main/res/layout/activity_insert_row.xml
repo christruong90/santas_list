@@ -19,7 +19,8 @@
             android:text="First Name"
             android:id="@+id/firstName"
             android:textColor="@color/white"
-            android:layout_below="@+id/toolbar"/>
+            android:layout_below="@+id/toolbar"
+            />
 
         <EditText
             android:layout_width="match_parent"

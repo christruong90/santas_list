@@ -2,9 +2,12 @@ package ca.bcit.ass2.truong_chen;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -14,6 +17,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class AddChild extends AppCompatActivity implements ChildDialog.ChildDialogLisenter, SearchDialog.SearchDialogListener {
@@ -40,8 +44,10 @@ public class AddChild extends AppCompatActivity implements ChildDialog.ChildDial
         setSupportActionBar(toolbar);
 
 
-
         myDb = new myListDbHelper(this);
+
+
+
 
 
 
