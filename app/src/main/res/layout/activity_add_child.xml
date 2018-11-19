@@ -9,92 +9,102 @@
     android:background="@drawable/repeat_bg"
     >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Chris Truong and Chang Chen"
-        android:gravity="center"
-        />
+
 
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:orientation="vertical">
 
 
-        <include layout="@layout/toolbar_main" android:id="@+id/toolbar" />
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_main" />
+
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center">
 
             <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center">
-            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center">
-                    <ImageButton
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:text="Santa's List"
-                        android:id="@+id/button_showData"
-                        android:src="@drawable/hat"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:scaleType="fitXY"
-                       />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
 
-                    <ImageButton
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:scaleType="fitXY"
-                        android:text="Edit Info"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:src="@drawable/gift"
-                        android:id="@+id/button_edit"
-                        />
-                </LinearLayout>
+
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center">
-                    <ImageButton
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginTop="15dp"
-                        android:scaleType="fitXY"
-                        android:text="Delete an Entry"
-                        android:id="@+id/button_Delete"
-                        android:src="@drawable/dear"
-                        />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                    <ImageButton
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="15dp"
-                        android:scaleType="fitXY"
-                        android:text="Search"
-                        android:src="@drawable/search"
-                        android:id="@+id/button_Search"
-                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Chris Truong and Chang Chen" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/button_showData"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/hat"
+                            android:text="Santa's List" />
+
+                        <ImageButton
+                            android:id="@+id/button_edit"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/gift"
+                            android:text="Edit Info" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/button_Delete"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginRight="15dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/dear"
+                            android:text="Delete an Entry" />
+
+                        <ImageButton
+                            android:id="@+id/button_Search"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/search"
+                            android:text="Search" />
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-        </ScrollView>
+            </ScrollView>
         </LinearLayout>
     </LinearLayout>
 
