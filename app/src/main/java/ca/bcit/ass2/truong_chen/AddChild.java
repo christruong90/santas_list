@@ -30,6 +30,7 @@ public class AddChild extends AppCompatActivity implements ChildDialog.ChildDial
     ImageButton btnDel;
     ImageButton btnSearch;
 
+
 //    String returnId;
 //    String returnFirstName;
 
@@ -66,6 +67,10 @@ public class AddChild extends AppCompatActivity implements ChildDialog.ChildDial
 //        editDateCreated = (EditText) findViewById(R.id.editText_dateCreated);
 
 //        btnAddData = (Button)findViewById(R.id.button_addRow);
+
+
+
+
         btnViewData = (ImageButton) findViewById(R.id.button_showData);
         btnEdit = (ImageButton) findViewById(R.id.button_edit);
         btnDel = (ImageButton) findViewById(R.id.button_Delete);

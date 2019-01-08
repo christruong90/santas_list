@@ -22,7 +22,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:text="Add"
-                android:id="@+id/button_addData"
+                android:id="@+id/button_landInsert"
                 android:src="@drawable/star"
                 android:scaleType="fitXY"
                 />
@@ -32,7 +32,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:text="Edit Info"
-                android:id="@+id/button_edit"
+                android:id="@+id/button_landEdit"
                 android:src="@drawable/star2"
                 android:scaleType="fitXY"
                 />
@@ -42,7 +42,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:text="Delete an Entry"
-                android:id="@+id/button_Delete"
+                android:id="@+id/button_landDelete"
                 android:src="@drawable/star3"
                 android:scaleType="fitXY"
                 />
@@ -53,7 +53,7 @@
                 android:layout_height="60dp"
                 android:text="Search"
                 android:src="@drawable/star4"
-                android:id="@+id/button_Search"
+                android:id="@+id/button_landSearch"
                 android:scaleType="fitXY"
                 />
         </TableRow>

@@ -8,13 +8,7 @@
 
     <include layout="@layout/toolbar_main" android:id="@+id/toolbar" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Chris Truong and Chang Chen"
-        tools:text="Chris Truong and Chang Chen" />
+
 
     <!--<Button-->
         <!--android:layout_width="wrap_content"-->
