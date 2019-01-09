@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Truong_Chen</string>
+    <string name="app_name">Santa\'s List</string>
     <string name="add_child_title">Add a Child</string>
     <string name="edit_child_title">Edit Child Entry</string>
     <string name="delete_child_title">Delete Child Entry</string>
